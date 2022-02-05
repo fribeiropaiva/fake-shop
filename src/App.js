@@ -1,7 +1,13 @@
 import "./App.css";
+import { Header } from "./components/Header";
 
 function App() {
-  return <div className="App">React</div>;
+  return (
+    <>
+      <Header />
+      <main className="App">React</main>
+    </>
+  );
 }
 
 export default App;
