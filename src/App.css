@@ -7,6 +7,14 @@
   pointer-events: none;
 }
 
+header.ui.fixed.menu {
+  margin-bottom: 2rem;
+}
+
+.ui.grid {
+  margin-top: unset;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
