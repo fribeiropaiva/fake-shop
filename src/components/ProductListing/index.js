@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 
 export const ProductListing = () => {
   const products = useSelector((state) => state.allProducts.products);
-  console.log(products);
+
   return (
     <section className={styles.container}>
       {products.map((product) => (
