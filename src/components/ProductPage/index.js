@@ -20,6 +20,8 @@ export const ProductPage = () => {
     fetchProducts();
   }, []);
   return (
-    <section className={styles.container}>{/* <ProductListing /> */}</section>
+    <section className={styles.container}>
+      <ProductListing />
+    </section>
   );
 };
