@@ -7,18 +7,20 @@ import styles from "./styles.module.css";
 
 export const ProductPage = () => {
   const dispatch = useDispatch();
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get("https://fakestoreapi.com/products");
-      dispatch(setProducts(response.data));
-    } catch (e) {
-      console.warn(e.message);
-    }
-  };
 
   useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get("https://fakestoreapi.com/products");
+        dispatch(setProducts(response.data));
+      } catch (e) {
+        console.warn(e.message);
+      }
+    };
+
     fetchProducts();
   }, []);
+
   return (
     <section className={styles.container}>
       <ProductListing />
