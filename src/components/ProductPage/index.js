@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../../redux/actions/productsActions";
-import { Product } from "../Product";
 import axios from "axios";
 import { ProductListing } from "../ProductListing";
+import styles from "./styles.module.css";
 
 export const ProductPage = () => {
   const dispatch = useDispatch();
@@ -20,6 +20,6 @@ export const ProductPage = () => {
     fetchProducts();
   }, []);
   return (
-    <section className="ui grid container">{/* <ProductListing /> */}</section>
+    <section className={styles.container}>{/* <ProductListing /> */}</section>
   );
 };
