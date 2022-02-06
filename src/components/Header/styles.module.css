@@ -1,0 +1,7 @@
+.header {
+  height: 2.8rem;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 3px rgb(212, 209, 209);
+}

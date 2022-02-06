@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { ProductPage } from "./components/ProductPage";
 import { ProductDetails } from "./components/ProductDetails";
-import "./App.css";
+import "./global.css";
 
 function App() {
   return (
