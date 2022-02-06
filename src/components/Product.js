@@ -1,18 +1,20 @@
-import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
-export const Product = () => {
-  const products = useSelector((state) => state.allProducts.products);
-  const { id, title } = products[0];
+export const Product = ({ title, price, category, image, id }) => {
   return (
-    <article className="four column wide">
-      <div className="ui link cards">
+    <Link to={`/product/${id}`}>
+      <article className="ui link cards">
         <div className="card">
-          <div className="image"></div>
+          <div className="image">
+            <img src={image} alt={title} />
+          </div>
           <div className="content">
             <div className="header">{title}</div>
+            <div className="meta price">$ {price}</div>
+            <div className="meta">{category}</div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </Link>
   );
 };
